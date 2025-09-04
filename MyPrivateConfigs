@@ -1,0 +1,19 @@
+[Interface]
+Address = 10.240.149.171/32
+DNS = 8.8.8.8
+MTU = 1024
+Jc = 12
+Jmin = 130
+Jmax = 500
+S1 = 82
+S2 = 83
+H1 = 21
+H2 = 22
+H3 = 23
+H4 = 24
+PrivateKey = aPqNdgCTK0ZNxchP7NPdnRDXO+tOvEzBYaeQxygpPGk=
+
+[Peer]
+AllowedIPs = 0.0.0.0/0, ::/0
+Endpoint = awg4.awg25-lax01.mars.888x1.com:443
+PublicKey = rNJoNpJqXQdAYHCZFReDRj+poLP+Axz16aJgAPuQ0RE=
