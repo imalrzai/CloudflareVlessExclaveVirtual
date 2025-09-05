@@ -1,7 +1,7 @@
 client
 dev tun
 proto tcp
-remote 57.129.53.182 4430
+remote 15.204.97.217 3964
 cipher AES-256-CBC
 auth SHA256
 nobind
