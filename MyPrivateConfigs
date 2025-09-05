@@ -1,7 +1,7 @@
 client
 dev tun
-proto udp
-remote 57.129.53.182 8455
+proto tcp
+remote 51.159.107.237 3964
 resolv-retry infinite
 nobind
 persist-key
