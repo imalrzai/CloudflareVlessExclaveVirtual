@@ -1,19 +1,79 @@
-[Interface]
-Address = 10.240.149.171/32
-DNS = 8.8.8.8
-MTU = 1024
-Jc = 12
-Jmin = 130
-Jmax = 500
-S1 = 82
-S2 = 83
-H1 = 21
-H2 = 22
-H3 = 23
-H4 = 24
-PrivateKey = aPqNdgCTK0ZNxchP7NPdnRDXO+tOvEzBYaeQxygpPGk=
+client
+dev tun
+proto udp
+remote 209.46.102.22 443 
+remote 209.46.102.22 80
+remote 209.46.102.22 1194
+remote 209.46.102.22 1195
+remote 209.46.102.22 1196
+remote 209.46.102.22 1197
+remote 209.46.102.22 1198
+remote 209.46.102.22 1199
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+remote-cert-tls server
+cipher AES-128-GCM
+ignore-unknown-option block-outside-dns
+remote-random
+connect-timeout 4
+connect-retry 0
 
-[Peer]
-AllowedIPs = 0.0.0.0/0, ::/0
-Endpoint = awg4.awg25-lax01.mars.888x1.com:443
-PublicKey = rNJoNpJqXQdAYHCZFReDRj+poLP+Axz16aJgAPuQ0RE=
+<ca>
+-----BEGIN CERTIFICATE-----
+MIIDSzCCAjOgAwIBAgIUJ+b9MWBjG3jwk9v7mGtj82c/fvIwDQYJKoZIhvcNAQEL
+...
+-----END CERTIFICATE-----
+</ca>
+
+<cert>
+-----BEGIN CERTIFICATE-----
+MIIDVTCCAj2gAwIBAgIRAP40I2mb7m6So/LQ1zRTKFgwDQYJKoZIhvcNAQELBQAw
+...
+-----END CERTIFICATE-----
+</cert>
+
+<key>
+-----BEGIN PRIVATE KEY-----
+MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDpQDsF9qvKk0No
+...
+-----END PRIVATE KEY-----
+</key>
+
+<tls-crypt>
+-----BEGIN OpenVPN Static key V1-----
+f49ad71fa30060dce58b87515abf14d2
+99113ce95ff30b4d0c94919935725ae5
+...
+-----END OpenVPN Static key V1-----
+</tls-crypt>
+
+<ca>
+-----BEGIN CERTIFICATE-----
+MIIDSzCCAjOgAwIBAgIUJ+b9MWBjG3jwk9v7mGtj82c/fvIwDQYJKoZIhvcNAQEL
+...
+-----END CERTIFICATE-----
+</ca>
+
+<cert>
+-----BEGIN CERTIFICATE-----
+MIIDVTCCAj2gAwIBAgIRAP40I2mb7m6So/LQ1zRTKFgwDQYJKoZIhvcNAQELBQAw
+...
+-----END CERTIFICATE-----
+</cert>
+
+<key>
+-----BEGIN PRIVATE KEY-----
+MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDpQDsF9qvKk0No
+...
+-----END PRIVATE KEY-----
+</key>
+
+<tls-crypt>
+-----BEGIN OpenVPN Static key V1-----
+f49ad71fa30060dce58b87515abf14d2
+99113ce95ff30b4d0c94919935725ae5
+...
+-----END OpenVPN Static key V1-----
+</tls-crypt>
