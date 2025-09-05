@@ -1,35 +1,29 @@
-mixed-port: 7890
-allow-lan: true
-mode: Rule
-log-level: info
+[general]
+log-level = "info"
 
-dns:
-  enable: true
-  enhanced-mode: fake-ip
-  nameserver:
-    - 8.8.8.8
-    - 8.8.4.4
+[[proxies]]
+name = "smart"
+protocol = "trojanx"
+server = "xback001.app.xback.io"
+sni = "xback001.app.xback.io"
+port = 65432
+password = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTk3MDM5NTMsImlhdCI6MTc1NzExMTk1MywiaXNzIjoiWGJhY2sgQ2xpZW50IEFwaSIsIm5iZiI6MTc1NzExMDk1MywiVVVJRCI6IjA2ZjRhZjEwLWZmMTUtNGM1Mi1iYjkyLTY5ODQwYjc5YjRhMSIsIkdyb3VwSWQiOjIwMDAwMDAsIlVzZXJOYW1lIjoiYWxpcmV4YXh1bHN0QGdtYWlsLmNvbSIsIkNvbXBhbnlJZCI6MjAwMDAwMCwiQ29tcGFueU5hbWUiOiIiLCJCdWZmZXJUaW1lIjo4NjQwMCwiRGV2aWNlQ29kZSI6IjU4ODFlNGUwZjUyMDg0ZTdjMWRhN2FjMDc4N2FmNmJlY2E4MGMxMTMwNWZiMWNjMzZiY2ZjNmRiZjg0NDk1MTkiLCJFbmRVbml4IjoxNzU3MzcwNzAyfQ.PM-TmW-6wUN4UgegJF47tUxRoNBN8D359i1qK59fUS8"
+alpn = ["h2", "http/1.1"]
+skip_cert_verify = false
+router_name = "line-xback001p"
+source_name = "FRA999_27402"
+quic = false
+quic_max_stream_in_conn = 64
+amux = false
+amux_max_accepts = 16
+amux_concurrency = 8
+enable_session = true
 
-proxies:
-  - name: "smart"
-    type: trojan
-    server: xback001.app.xback.io
-    port: 65432
-    password: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTk3MDM5NTMsImlhdCI6MTc1NzExMTk1MywiaXNzIjoiWGJhY2sgQ2xpZW50IEFwaSIsIm5iZiI6MTc1NzExMDk1MywiVVVJRCI6IjA2ZjRhZjEwLWZmMTUtNGM1Mi1iYjkyLTY5ODQwYjc5YjRhMSIsIkdyb3VwSWQiOjIwMDAwMDAsIlVzZXJOYW1lIjoiYWxpcmV4YXh1bHN0QGdtYWlsLmNvbSIsIkNvbXBhbnlJZCI6MjAwMDAwMCwiQ29tcGFueU5hbWUiOiIiLCJCdWZmZXJUaW1lIjo4NjQwMCwiRGV2aWNlQ29kZSI6IjU4ODFlNGUwZjUyMDg0ZTdjMWRhN2FjMDc4N2FmNmJlY2E4MGMxMTMwNWZiMWNjMzZiY2ZjNmRiZjg0NDk1MTkiLCJFbmRVbml4IjoxNzU3MzcwNzAyfQ.PM-TmW-6wUN4UgegJF47tUxRoNBN8D359i1qK59fUS8"
-    sni: xback001.app.xback.io
-    alpn:
-      - h2
-      - http/1.1
-    skip-cert-verify: false
-    udp: true
+[[proxy-groups]]
+name = "Proxy"
+type = "select"
+proxies = ["smart", "DIRECT"]
 
-proxy-groups:
-  - name: "Proxy"
-    type: select
-    proxies:
-      - smart
-      - DIRECT
-
-rules:
-  - GEOIP,CN,DIRECT
-  - MATCH,Proxy
+[[rules]]
+type = "FINAL"
+action = "Proxy"
