@@ -1,14 +1,14 @@
 client
 dev tun
 proto udp
-remote 128.90.128.254 17494
+remote 128.90.148.254 17494
 nobind
 persist-key
 persist-tun
 resolv-retry 30
 explicit-exit-notify 2
 
-verify-x509-name de1.vyprvpn.com name
+verify-x509-name at1.vyprvpn.com name
 remote-cert-tls server
 
 auth-user-pass
@@ -50,7 +50,7 @@ Gq3tLVeC54g7XZIc7X0S9avgAE7h9SuRYmsSzvLTtiP1obMCHB5ebQ==
 -----BEGIN CERTIFICATE-----
 MIIGDjCCA/agAwIBAgIJAL2ON5xbane/MA0GCSqGSIb3DQEBDQUAMIGTMQswCQYD
 VQQGEwJDSDEQMA4GA1UECAwHTHVjZXJuZTEPMA0GA1UEBwwGTWVnZ2VuMRkwFwYD
-VQQKDBBHb2xkZW4gRnJvZyBHbWJIMSEwHwYDVQQDDBhHb2xkZW4gRnJvZyBHbWJI
+VQQKDBBHb2xkZW4gRnJvZyBHbWJIMSEwHwYDVQQDDBhHb2xkZW5Gcm9nIEdtYkg
 IFJvb3QgQ0ExIzAhBgkqhkiG9w0BCQEWFGFkbWluQGdvbGRlbmZyb2cuY29tMB4X
 DTE5MTAxNzIwMTQxMFoXDTM5MTAxMjIwMTQxMFowgZMxCzAJBgNVBAYTAkNIMRAw
 DgYDVQQIDAdMdWNlcm5lMQ8wDQYDVQQHDAZNZWdnZW4xGTAXBgNVBAoMEEdvbGRl
