@@ -1,17 +1,24 @@
 client
 dev tun
-proto udp
-client-cert-not-required
-remote 146.70.190.2 800
-connect-timeout 5
-auth-user-pass
-scramble obfuscate 3759e322194de74e6a8baed365671db7
-resolv-retry infinite
 nobind
 persist-key
 persist-tun
 remote-cert-tls server
-verb 3
+auth-user-pass
+connect-timeout 5
+resolv-retry infinite
+verb 4
+client-cert-not-required
+
+<connection>
+remote 146.70.190.2 800 udp
+proto udp
+</connection>
+
+<connection>
+remote 146.70.190.2 800 tcp
+proto tcp-client
+</connection>
 
 <auth-user-pass>
 vpn
@@ -47,4 +54,3 @@ D0RpZ2lDZXIgVGVzdCBDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
 AQEArE5L/fAblpQH7M8ZjBiEogW9pU+F/AUtRPXQZwU4Po1h4iGj/3P8yH7zKpUo
 ...
 -----END CERTIFICATE-----
-</ca>
