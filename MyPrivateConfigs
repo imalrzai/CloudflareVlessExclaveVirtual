@@ -1,9 +1,11 @@
 client
 dev tun
 proto tcp
-# Turkey servers
-remote 149.102.229.65 443
-remote 217.138.202.58 443
+# Germany servers
+remote 189.1.171.70 443
+remote 189.1.171.74 443
+remote 146.70.243.82 443
+remote 146.70.243.90 443
 
 resolv-retry infinite
 nobind
@@ -14,13 +16,13 @@ cipher AES-256-GCM
 auth SHA256
 verb 3
 explicit-exit-notify 0
-setenv FRIENDLY_NAME "TR via 149.102.229.65/217.138.202.58"
+setenv FRIENDLY_NAME "DE via 189.1.171.70/189.1.171.74/146.70.243.82/146.70.243.90"
 
 auth-user-pass inline
 
 <auth-user-pass>
-10c3084445fd4be980496a05ef0f1496
-10c3084445fd4be980496a05ef0f1496
+10875ff2198668f0b21dca4783cc3486
+10875ff2198668f0b21dca4783cc3486
 </auth-user-pass>
 
 <ca>
