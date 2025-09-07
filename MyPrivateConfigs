@@ -1,13 +1,13 @@
 [Interface]
 PrivateKey = 4BXsU/XJ6mb38aiI1Tmgms564QfneDLxlsVJiWcHiFI=
-Address = 100.126.17.129/32
+Address = 100.126.24.43/32
 DNS = 1.1.1.1
 ListenPort = 33009
 MTU = 1280
 
 [Peer]
-PublicKey = NjgvX/InHObWjgCeYpNnVHTavr2jcUq6dlwIabjji3s=
+PublicKey = xn190TERp2AQcbXMIl7qhgkNX5ezqEZ7IjtLNo/O8kE=
 PresharedKey = AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 AllowedIPs = 0.0.0.0/0, ::/0
-Endpoint = 185.77.217.31:41194
+Endpoint = 5.62.41.121:41194
 PersistentKeepalive = 25
