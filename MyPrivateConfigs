@@ -1,6 +1,6 @@
 [Interface]
 PrivateKey = 4BXsU/XJ6mb38aiI1Tmgms564QfneDLxlsVJiWcHiFI=
-Address = 10.0.0.2/32
+Address = 100.126.24.43/32
 DNS = 1.1.1.1
 ListenPort = 33009
 
@@ -9,3 +9,4 @@ PublicKey = NjgvX/InHObWjgCeYpNnVHTavr2jcUq6dlwIabjji3s=
 PresharedKey = AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 AllowedIPs = 0.0.0.0/0, ::/0
 Endpoint = 185.77.217.31:41194
+PersistentKeepalive = 25
