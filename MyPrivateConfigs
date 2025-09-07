@@ -7,7 +7,7 @@ remote-cert-tls server
 auth-user-pass
 connect-timeout 5
 resolv-retry infinite
-verb 4
+verb 5
 client-cert-not-required
 
 <connection>
