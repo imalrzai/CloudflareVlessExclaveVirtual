@@ -1,14 +1,14 @@
 client
 dev tun
 proto udp
-remote 5.231.70.155 443
+remote 5.231.70.141 443
 resolv-retry infinite
 nobind
 persist-key
 persist-tun
 
 remote-cert-tls server
-verify-x509-name firebaseinstallations.googleapis.com name
+verify-x509-name vinevpn.com name
 cipher AES-256-GCM
 auth SHA256
 auth-nocache
