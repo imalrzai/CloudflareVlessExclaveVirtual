@@ -6,48 +6,109 @@ suppress-timestamps
 allow-recursive-routing
 
 <connection>
-remote 51.210.182.142 1196 udp
+remote 146.70.16.158 1196 udp
 connect-retry 5 5
 </connection>
 <connection>
-remote 51.210.182.142 1197 udp
+remote 146.70.16.154 1195 udp
 connect-retry 5 5
 </connection>
 <connection>
-remote 51.210.182.142 1194 udp
+remote 146.70.16.154 1199 udp
 connect-retry 5 5
 </connection>
 <connection>
-remote 51.210.182.142 1195 udp
+remote 146.70.16.157 1198 udp
 connect-retry 5 5
 </connection>
 <connection>
-remote 51.210.182.142 1199 udp
+remote 146.70.16.154 1196 udp
 connect-retry 5 5
 </connection>
 <connection>
-remote 51.210.182.142 1198 udp
-connect-retry 5 5
-</connection>
-# IPv6 endpoints
-<connection>
-remote 2001:41d0:304:200::2edb 1195 udp
+remote 146.70.16.156 1196 udp
 connect-retry 5 5
 </connection>
 <connection>
-remote 2001:41d0:304:200::2edb 1194 udp
+remote 146.70.16.155 1197 udp
 connect-retry 5 5
 </connection>
 <connection>
-remote 2001:41d0:304:200::2edb 1196 udp
+remote 146.70.16.154 1197 udp
 connect-retry 5 5
 </connection>
 <connection>
-remote 2001:41d0:304:200::2edb 1197 udp
+remote 146.70.16.156 1197 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 146.70.16.155 1196 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 146.70.16.155 1198 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 146.70.16.156 1198 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 146.70.16.157 1199 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 146.70.16.155 1195 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 146.70.16.155 1199 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 146.70.16.156 1199 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 146.70.16.157 1195 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 146.70.16.154 1198 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 146.70.16.156 1195 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 146.70.16.157 1197 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 146.70.16.157 1196 udp
 connect-retry 5 5
 </connection>
 
-verify-x509-name fr.eu.openvpn.vpnable.net name
+# IPv6 endpoints
+<connection>
+remote 2001:ac8:59:6b::2 1198 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 2001:ac8:59:6b::2 1196 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 2001:ac8:59:6b::2 1195 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 2001:ac8:59:6b::2 1199 udp
+connect-retry 5 5
+</connection>
+
+verify-x509-name se.eu.openvpn.vpnable.net name
 resolv-retry infinite
 reneg-sec 0
 rcvbuf 2097152
@@ -95,8 +156,8 @@ oyi3B43njTOQ5yOf+1CceWxG1bQVs5ZufpsMljq4Ui0/1lvh+wjChP4kqKOJ2qxq
 mRGunUHBcnWEvgJBQl9nJEiU0Zsnvgc/ubhPgXRR4Xq37Z0j4r7g1SgEEzwxA57d
 emyPxgcYxn/eR44/KJ4EBs+lVDR3veyJm+kXQ99b21/+jh5Xos1AnX5iItreGCc=
 -----END CERTIFICATE-----
-</ca>
 
+</ca>
 key-direction 1
 <tls-auth>
 -----BEGIN OpenVPN Static key V1-----
@@ -117,4 +178,5 @@ c62149e6edf0e158f3c4d10ca6a971ce
 f0d93b5b73d0fb13f12f11b670230324
 2fae12348e720e6efd18ff8b130cc9bb
 -----END OpenVPN Static key V1-----
+
 </tls-auth>
