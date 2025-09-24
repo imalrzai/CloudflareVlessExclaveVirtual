@@ -1,126 +1,178 @@
 client
 dev tun
-proto udp
-remote 147.93.0.170 34609
-remote-random
-push-peer-info
-ping 5
-#ping-exit 10
-ping-restart 20
-mute 3
-resolv-retry 5
-nobind
-persist-tun
-persist-key
-verb 3
-auth-user-pass
 auth-nocache
-remote-cert-tls server
-cipher AES-256-CBC
-data-ciphers AES-256-GCM:AES-128-GCM:AES-256-CBC
-auth SHA512
-setenv opt block-outside-dns
-connect-timeout 10
-hand-window 30
+script-security 0
+suppress-timestamps
+allow-recursive-routing
+
+<connection>
+remote 92.119.177.61 1199 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.61 1194 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.59 1198 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.61 1196 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.60 1198 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.58 1194 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.59 1194 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.61 1197 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.58 1198 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.58 1199 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.60 1196 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.59 1195 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.62 1199 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.62 1194 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.58 1196 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.59 1196 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.61 1195 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.59 1197 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.62 1198 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.62 1196 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.59 1199 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.60 1194 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.58 1197 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.62 1197 udp
+connect-retry 5 5
+</connection>
+<connection>
+remote 92.119.177.58 1195 udp
+connect-retry 5 5
+</connection>
+
+verify-x509-name us.na.openvpn.vpnable.net name
+resolv-retry infinite
 reneg-sec 0
-connect-retry-max 1
-connect-retry 2 300
+rcvbuf 2097152
+sndbuf 2097152
+remote-cert-tls server
+replay-window 2048 15
+auth SHA256
+data-ciphers AES-128-GCM:CHACHA20-POLY1305
+verb 3
+mute 20
+tls-version-min 1.2
+auth-user-pass
+auth-retry interact
 
 <ca>
 -----BEGIN CERTIFICATE-----
-MIIDSDCCAjCgAwIBAgIUDeLZzrOifd8K57/1D6EX0xBsZ8AwDQYJKoZIhvcNAQEL
-BQAwFTETMBEGA1UEAwwKRm9ydGlmeVZQTjAeFw0yNDAxMDkyMzMyMzJaFw0zNDAx
-MDYyMzMyMzJaMBUxEzARBgNVBAMMCkZvcnRpZnlWUE4wggEiMA0GCSqGSIb3DQEB
-AQUAA4IBDwAwggEKAoIBAQC1PN6wqklAmT+IxYJXBlhKp0w6cSO98iZj4D9jW1qu
-zncJ4bAEfNYD9JlcY5GfqGMhc8N2Li3RbG6GeSBDazO5xWG0e+9GCMoyiiNZecbE
-rW6aUXbagLtvlUNl87Bwl/Rjcfdm0a8lXhqzv+McHFjw6WNoBm5yBH3gtPmTGxFd
-0p19NVxuiIlbComzUmdPWCKI+xbgh9ZuTE17fywrHi5C8RqrZkaO54i0ficbloiP
-n9gHtnMAKv3s2CcLQH4kavIIVZLNHb2adV1ofbpRW4/lYoAwZnGDvmii5jf/kzUK
-4cwPUcjchA2F6DMpRq8MSYc8QjFKQ4+isfGEHw0kEVMRAgMBAAGjgY8wgYwwHQYD
-VR0OBBYEFOhHi/iSJCSkGHAYZivGjOL6d2+DMFAGA1UdIwRJMEeAFOhHi/iSJCSk
-GHAYZivGjOL6d2+DoRmkFzAVMRMwEQYDVQQDDApGb3J0aWZ5VlBOghQN4tnOs6J9
-3wrnv/UPoRfTEGxnwDAMBgNVHRMEBTADAQH/MAsGA1UdDwQEAwIBBjANBgkqhkiG
-9w0BAQsFAAOCAQEAX1GEVDhHFcEy4WlGu9qAYP4LuEZON/4k+kzJ4TAhmls2dYgd
-8BVHBTRMkzJRmE5OE/Ofn4uhiz4fTGEVdUFC1OCg89MCPUTOzLV7+p2OZN5sXcxD
-sUs3+sdiUnjt8e85+kWcSx3Gb6FohxwcMWPnvzuWmJr/Jt7eZVTz79520ZjnGAT0
-l+eQ4mA8DYzkYnU7roBVrur/e7bKmt4xvwTfBhf+3eXZXgK3L5hbjiURb0Q73Swx
-FwQ6qykXZm2KAGj2yKp3eWlpCaU/29q1OhVwBwhdA5FOzY3xRxl4Ik7K9SS4VTse
-4Lu0fuhPlXcb6e75IV/hx9CSBgsiGd4cZzgsfg==
+MIIFazCCA1OgAwIBAgIRAIIQz7DSQONZRGPgu2OCiwAwDQYJKoZIhvcNAQELBQAw
+TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh
+cmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMTUwNjA0MTEwNDM4
+WhcNMzUwNjA0MTEwNDM4WjBPMQswCQYDVQQGEwJVUzEpMCcGA1UEChMgSW50ZXJu
+ZXQgU2VjdXJpdHkgUmVzZWFyY2ggR3JvdXAxFTATBgNVBAMTDElTUkcgUm9vdCBY
+MTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAK3oJHP0FDfzm54rVygc
+h77ct984kIxuPOZXoHj3dcKi/vVqbvYATyjb3miGbESTtrFj/RQSa78f0uoxmyF+
+0TM8ukj13Xnfs7j/EvEhmkvBioZxaUpmZmyPfjxwv60pIgbz5MDmgK7iS4+3mX6U
+A5/TR5d8mUgjU+g4rk8Kb4Mu0UlXjIB0ttov0DiNewNwIRt18jA8+o+u3dpjq+sW
+T8KOEUt+zwvo/7V3LvSye0rgTBIlDHCNAymg4VMk7BPZ7hm/ELNKjD+Jo2FR3qyH
+B5T0Y3HsLuJvW5iB4YlcNHlsdu87kGJ55tukmi8mxdAQ4Q7e2RCOFvu396j3x+UC
+B5iPNgiV5+I3lg02dZ77DnKxHZu8A/lJBdiB3QW0KtZB6awBdpUKD9jf1b0SHzUv
+KBds0pjBqAlkd25HN7rOrFleaJ1/ctaJxQZBKT5ZPt0m9STJEadao0xAH0ahmbWn
+OlFuhjuefXKnEgV4We0+UXgVCwOPjdAvBbI+e0ocS3MFEvzG6uBQE3xDk3SzynTn
+jh8BCNAw1FtxNrQHusEwMFxIt4I7mKZ9YIqioymCzLq9gwQbooMDQaHWBfEbwrbw
+qHyGO0aoSCqI3Haadr8faqU9GY/rOPNk3sgrDQoo//fb4hVC1CLQJ13hef4Y53CI
+rU7m2Ys6xt0nUW7/vGT1M0NPAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwIBBjAPBgNV
+HRMBAf8EBTADAQH/MB0GA1UdDgQWBBR5tFnme7bl5AFzgAiIyBpY9umbbjANBgkq
+hkiG9w0BAQsFAAOCAgEAVR9YqbyyqFDQDLHYGmkgJykIrGF1XIpu+ILlaS/V9lZL
+ubhzEFnTIZd+50xx+7LSYK05qAvqFyFWhfFQDlnrzuBZ6brJFe+GnY+EgPbk6ZGQ
+3BebYhtF8GaV0nxvwuo77x/Py9auJ/GpsMiu/X1+mvoiBOv/2X/qkSsisRcOj/KK
+NFtY2PwByVS5uCbMiogziUwthDyC3+6WVwW6LLv3xLfHTjuCvjHIInNzktHCgKQ5
+ORAzI4JMPJ+GslWYHb4phowim57iaztXOoJwTdwJx4nLCgdNbOhdjsnvzqvHu7Ur
+TkXWStAmzOVyyghqpZXjFaH3pO3JLF+l+/+sKAIuvtd7u+Nxe5AW0wdeRlN8NwdC
+jNPElpzVmbUq4JUagEiuTDkHzsxHpFKVK7q4+63SM1N95R1NbdWhscdCb+ZAJzVc
+oyi3B43njTOQ5yOf+1CceWxG1bQVs5ZufpsMljq4Ui0/1lvh+wjChP4kqKOJ2qxq
+4RgqsahDYVvTH9w7jXbyLeiNdd8XM2w9U/t7y0Ff/9yi0GE44Za4rF2LN9d11TPA
+mRGunUHBcnWEvgJBQl9nJEiU0Zsnvgc/ubhPgXRR4Xq37Z0j4r7g1SgEEzwxA57d
+emyPxgcYxn/eR44/KJ4EBs+lVDR3veyJm+kXQ99b21/+jh5Xos1AnX5iItreGCc=
 -----END CERTIFICATE-----
 </ca>
 
-<cert>
------BEGIN CERTIFICATE-----
-MIIDYDCCAkigAwIBAgIQP/z/mAlVNddzohzjQghcqzANBgkqhkiG9w0BAQsFADAW
-MRQwEgYDVQQDDAt2cG5ib29rLmNvbTAeFw0yMzAyMjAyMzMwNDlaFw0zMzAyMTcy
-MzMwNDlaMB0xGzAZBgNVBAMMEmNsaWVudC52cG5ib29rLmNvbTCCASIwDQYJKoZI
-hvcNAQEBBQADggEPADCCAQoCggEBANPiNyyYH6yLXss6AeHLzJ6/9JfUzVAs7ttq
-8OWJRkBjKuEPW3MUVjpMgptm6+zJohM4IdSo/ES6H81sLK4AWiUUOzeOt8xAzgib
-NrLss5px0D0Pm+uXH8hGOle386JH5oyOQ6ub2O3ro0TeTF4rg43TF1oOz2AVS/gc
-sB3d6AG73otZ4C6/wabiGz4rFO8xl4S4PBKX73Eb7cdSoACc8AIrqcR+PEDHOZYt
-1qp4lM87+5ADEXelpe9vLTaoXonIuZElqA9rwFi/KQmPCHsl7eEnmSo1iOg0y3iP
-0CRHzv8FkvhhpB9Z3i3TUxq8XvnLtEQ38eD5Dw20WMYPmPShtXMCAwEAAaOBojCB
-nzAJBgNVHRMEAjAAMB0GA1UdDgQWBBQKO5Ub8pRCA8iTdRIxUIeMpNX2vzBRBgNV
-HSMESjBIgBQuAzxn3Vws5IeXoQMXyNqXHemKpKEapBgwFjEUMBIGA1UEAwwLdnBu
-Ym9vay5jb22CFCXSevupU4mGQb6Zdj+NC4MdwXh6MBMGA1UdJQQMMAoGCCsGAQUF
-BwMCMAsGA1UdDwQEAwIHgDANBgkqhkiG9w0BAQsFAAOCAQEAel1YOAWHWFLH3N41
-SCIdQNbkQ18UFBbtZz4bzV6VeCWHNzPtWQ6UIeADpcBp0mngS09qJCQ8PwOBMvFw
-MizhDz2Ipz817XtLJuEMQ3Io51LRxPP394mlw46e8KFOh06QI8jnC/QlBH19PI+M
-OeQ3Gx6uYK41HHmyu/Z7dUE4c4s2iiHA7UgD98dkrU0rGAv1R/d2xRXqEm4PrwDj
-MlC1TY8LrIJd6Ipt00uUfHVAzhX3NKR528azYH3bud5NV+KEiQZSyirUyoMbMQeO
-UXh+GEDX5GBPElzQmPOsLete/PMH9Ayg6Gh/sccqwgH7BxjqcVLKXg2S4jL5BUPd
-kI3/sg==
------END CERTIFICATE-----
-</cert>
-
-<key>
------BEGIN PRIVATE KEY-----
-MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDT4jcsmB+si17L
-OgHhy8yev/SX1M1QLO7bavDliUZAYyrhD1tzFFY6TIKbZuvsyaITOCHUqPxEuh/N
-bCyuAFolFDs3jrfMQM4Imzay7LOacdA9D5vrlx/IRjpXt/OiR+aMjkOrm9jt66NE
-3kxeK4ON0xdaDs9gFUv4HLAd3egBu96LWeAuv8Gm4hs+KxTvMZeEuDwSl+9xG+3H
-UqAAnPACK6nEfjxAxzmWLdaqeJTPO/uQAxF3paXvby02qF6JyLmRJagPa8BYvykJ
-jwh7Je3hJ5kqNYjoNMt4j9AkR87/BZL4YaQfWd4t01MavF75y7REN/Hg+Q8NtFjG
-D5j0obVzAgMBAAECggEAAV/BLdfatLq+paC9rGIu9ISYKHfn0PJJpkCeSU7HltlN
-yOHZnPhvyrb+TdWwB/wSwf8mMQPbhvKSDDn8XDCCZSUpcSXKyVdOPr4K78QbMhA0
-4oB8aV20hg72h+UYfl/q/dRaWf2LvZc+ms66Pg4YL05EI4BfFedtc7Fz7u2meIRl
-Wm0b7/QQ10wrR1I7PonZzgnU9diB1cKxptJ06AfJmCGobymjq/A1JsAr/NFnJlmu
-yq3n5tcRpfc8K+XsfnpwDQJo3kKwLGIoBmUkGEcHgQhVwOL5+P+3pTYr1bt4cAUp
-FxbExqcxW0es//g3x2Z80icUpa4/OvSTAa0XF3J4UQKBgQDv4E/3/r5lULYIksNC
-zO1yRp7awv41ZAUpDSglNtWsehnhhUsiVE/Ezmyz4E0qjsW2+EUxUZ990T4ZVK4b
-9cEhB/TDBc6PBPd498aIGiiqznWXMdsU2o6xrvkQeWdmXoVjvWTcRWlfAQ+PQBOJ
-tJ3wR7ZoHgu0P/yzIzn0eQ+BiQKBgQDiIDgRtlQBw8tZc66OzxWOuJh6M5xUF5zY
-S0SLXFWlKVkfGACaerHUlFwZKID39BBifgXO1VOQ6AzalDd2vaIU9CHo2bFpTY7S
-EkkcIt9Gpl5o1sjEyJChXBIz+s48XBMXlqFN7AdhX/H6R43g8eS/YlzqSBxkUcAa
-V3tt8n+sGwKBgD+aSXnnKNKyWOHjEDUJIzh2sy4sH71GXPvqiid756II6g3bCvX6
-RwBW/4meQrezDYebQrV2AAUbUwziYBv3yJKainKfeop/daK0iAaUcQ4BGjrRtFZO
-MSG51D5jAmCpVVMB59lj6jGPlXGVOtj7dBk+2oW22cGcacOR5o8E/nCJAoGBALVP
-KCXrj8gqea4rt1cCbEKXeIrjPwGePUCgeUFUs8dONAteb31ty5CrtHznoSEvLMQM
-UBPbsLmLlmLcXOx0eLVcWqQdiMbqTQ3bY4uP2n8HfsOJFEnUl0MKU/4hp6N2IEjV
-mlikW/aTu632Gai3y7Y45E9lqn41nlaAtpMd0YjpAoGBAL8VimbhI7FK7X1vaxXy
-tnqLuYddL+hsxXXfcIVNjLVat3L2WN0YKZtbzWD8TW8hbbtnuS8F8REg7YvYjkZJ
-t8VO6ZmI7I++borJBNmbWS4gEk85DYnaLI9iw4oF2+Dr0LKKAaUL+Pq67wmvufOn
-hTobb/WAAcA75GKmU4jn5Ln2
------END PRIVATE KEY-----
-</key>
-
-<tls-crypt>
+key-direction 1
+<tls-auth>
 -----BEGIN OpenVPN Static key V1-----
-4583d19e82e196b599a11e739b0c2d47
-91bf1c021e06de8d2fd790080955e52a
-e2d80b7f9b1f69bf364d09a15a9caa14
-4b3ba1dd5ee481bc5819f6a65b880cd9
-c4c820f9c9cc13b33e08a2d2a5a6463d
-e43564767a981bd32e6488094a132302
-cf0d3f522995efec644aa270151c5018
-bb5912b908c165249ab900a1c99796aa
-cca086e402f158922cbcc90e7c09d608
-c3ec8eb535b2499623245aa00c927050
-9c21bf0d3b74a8f4fe99166518d80e98
-639dd7099f0765ef1a63cfa04dcb7693
-65ba6ff6cd2a41222f73b7cdbe09f437
-6f7f5d13c9dae715161e0811df181f6d
-b883ee89ed7aca855bff1b481f511b96
-e5f7e88b9a39f0071b996064444f41c2
+3bc60255c39d59524781ad389baee4ce
+4881ddca0b54bdc72ee69fc47bf7a0f3
+47d31b7c5fdc282625e37ce6bdd83555
+d799a016156a2d42a9e769e473d6347a
+8631fef111262fe6b849a60e3a3bb267
+b75b3ef0af83015f91c9e249307d449b
+763d133915c5da913bdad99c3c59b875
+92c0f4ad13e1cfea74c6fa359bc6c0b4
+8203692cfdc7373864fd497ea91191f0
+c62149e6edf0e158f3c4d10ca6a971ce
+049f5cbad25526b4b840a847b53bdace
+1575b760bbecf81d494fe140051996bf
+01347e6a80e07f07e26ecb01673f0e69
+9ea1d95a38bdff6f8954c66c9b3215e6
+f0d93b5b73d0fb13f12f11b670230324
+2fae12348e720e6efd18ff8b130cc9bb
 -----END OpenVPN Static key V1-----
-</tls-crypt>
+</tls-auth>
