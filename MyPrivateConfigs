@@ -48,7 +48,7 @@ qioNZsFRPJqf8KwmVCEIJq38cM7nSRXrrZ36w9P4sMBRHABQBre2DIqdo9hoeA==
 
 tls-client
 remote-cert-tls server
-auth-user-pass
+auth-user-pass auth.txt
 compress lzo
 verb 3
 auth SHA256
