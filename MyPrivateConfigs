@@ -1,26 +1,23 @@
 client
 dev tun
 verb 4
-connect-retry-max 1
-connect-retry 1
+nobind
 resolv-retry 30
-
 ping 30
 ping-restart 30
-
-nobind
 
 route 0.0.0.0 0.0.0.0 vpn_gateway
 route-ipv6 ::/0
 
-remote 141.98.102.170 1194 udp
-remote 141.98.102.250 1194 udp
-remote 109.94.96.75 1194 udp
-remote 109.94.96.91 1194 udp
+remote 82.102.20.154 1194 udp
+remote 82.102.20.234 1194 udp
+remote 185.111.109.81 1194 udp
+remote 82.102.20.130 1194 udp
+remote 185.111.109.193 1194 udp
 
 <auth-user-pass>
-102e010ccba6a0cdb492d18622dbaac3
-95630d5de0f4f99ae299e5a597bb58f6
+101d037f6fb726413abf524b174b4400
+853f54d8c6f9a93b4b0dae2c1616943f
 </auth-user-pass>
 
 <ca>
@@ -38,9 +35,3 @@ V9SgV5MPox+WO3h7aBsCMEXOhv29t/u0G0TNGBQpizfvMHTj/HG6Tt98lLnobspr
 /Sqee+a/79MLcVg2HC8CWw==
 -----END CERTIFICATE-----
 </ca>
-
-management /data/user/0/com.fsecure.ms.safe/cache/mgmtsocket unix
-management-client
-management-query-passwords
-management-hold
-tmp-dir /data/user/0/com.fsecure.ms.safe/cache
