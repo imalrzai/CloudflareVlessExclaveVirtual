@@ -1,10 +1,36 @@
-[Interface]
-PrivateKey = z3hChUgcvSpXWUU6I3hPk8ZzvKds9vJUWQTxn+U7njE=
-Address = 10.234.0.30/32
-DNS = 198.51.100.2
+client
+dev tun
+verb 4
+nobind
+resolv-retry 30
+ping 30
+ping-restart 30
 
-[Peer]
-PublicKey = kuJ0GgkI6d7zhqqwueV//6mID8QlLIYvDVMwOz7kbgU=
-Endpoint = 109.94.96.91:51820
-PersistentKeepalive = 0
-AllowedIPs = 0.0.0.0/0, ::/0
+route 0.0.0.0 0.0.0.0 vpn_gateway
+route-ipv6 ::/0
+
+remote 146.70.222.138 443 tcp
+remote 149.102.235.204 443 tcp
+remote 146.70.222.130 443 tcp
+remote 149.102.235.193 443 tcp
+
+<auth-user-pass>
+10c63615401ef6f24cb08fa27d526e0c
+785edc4fdce85e8cc81f9c0b80f5aa10
+</auth-user-pass>
+
+<ca>
+-----BEGIN CERTIFICATE-----
+MIIB7DCCAXKgAwIBAgIRAImseuP2FHmCCeIk7Cfz2vQwCgYIKoZIzj0EAwMwHzEd
+MBsGA1UEAxMUQXVyYSBPcGVuVlBOIFByb2QgQ0EwIBcNMjIwNDE0MDIzMjMxWhgP
+MjEyMjAzMjEwMjQyMzFaMB8xHTAbBgNVBAMTFEF1cmEgT3BlblZQTiBQcm9kIENB
+MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEore/Hd92oexpocIap707HnmgDTNBpXui
+h3voC+eifqHa/zZzEWhmJOR47XHtIwoiKcdNYLUR5ZjzRimTHfG7MMwiqSYYOAoz
+ndumky/t1rNZiw1uv0RgRkDMl0+55AyEo3AwbjAOBgNVHQ8BAf8EBAMCAQYwHQYD
+VR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMBIGA1UdEwEB/wQIMAYBAf8CAQEw
+KQYDVR0OBCIEIOQ+yvwLQ26tIt+dn4zzMnB5Gw/HUHRW3ceraoHgR5zwMAoGCCqG
+SM49BAMDA2gAMGUCMQCe7/VS3bKt4hhHLsiwIMEZhBfXREq56t5y8goZ2cwq3b3p
+V9SgV5MPox+WO3h7aBsCMEXOhv29t/u0G0TNGBQpizfvMHTj/HG6Tt98lLnobspr
+/Sqee+a/79MLcVg2HC8CWw==
+-----END CERTIFICATE-----
+</ca>
