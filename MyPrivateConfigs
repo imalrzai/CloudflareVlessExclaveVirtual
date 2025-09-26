@@ -9,12 +9,12 @@ ping-restart 30
 route 0.0.0.0 0.0.0.0 vpn_gateway
 route-ipv6 ::/0
 
-remote 130.195.210.74 443 tcp
-remote 79.127.139.1 443 tcp
+remote 79.127.131.76 443 tcp
+remote 79.127.131.65 443 tcp
 
 <auth-user-pass>
-10e7249fe7b1c3b91f85a957fcd1caab
-21920e0ccc36a3559b4012b8fa5d3384
+100a9aca383124f768fd2d97ab24a129
+aaf3df3fc44345bf04685cf1b6a7d3f6
 </auth-user-pass>
 
 <ca>
