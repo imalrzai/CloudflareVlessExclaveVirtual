@@ -1,5 +1,5 @@
 [Interface]
-PrivateKey = 30d2f013014cadc8ba27e029c697919d1a0f7309999e97352c47ba1a52b0246d
+PrivateKey = MNLwEwFMrci6J+ApxpeRnRoPcwmZnpc1LEe6GlKwJG0=
 Address = 10.164.251.249/32
 DNS = 10.0.0.243, 10.0.0.242
 
