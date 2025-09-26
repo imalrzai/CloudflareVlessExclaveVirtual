@@ -2,7 +2,6 @@ client
 dev tun
 proto udp
 remote-cert-tls server
-tls-client
 verb 1
 reneg-sec 0
 cipher AES-256-GCM
