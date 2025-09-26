@@ -3,15 +3,10 @@ dev tun
 proto udp
 remote-cert-tls server
 tls-client
-resolv-retry infinite
-persist-key
 verb 1
 reneg-sec 0
 cipher AES-256-GCM
 auth SHA256
-ncp-disable
-connect-timeout 5
-connect-retry-max 1
 nobind
 
 <ca>
