@@ -1,20 +1,11 @@
-# Enables connection to GUI
-management /data/data/com.quickdy.express.hawk/cache/mgmtsocket unix
-management-client
-management-query-passwords
-management-hold
-
-setenv IV_GUI_VER "de.blinkt.openvpn 0.6.9"
-machine-readable-output
 client
 verb 4
 connect-retry-max 5
 connect-retry 5
 resolv-retry 60
 dev tun
-remote 0.0.0.0 0 udp
+remote 172.236.220.150 443 udp
 auth-user-pass
-
 <ca>
 -----BEGIN CERTIFICATE-----
 MIIFNjCCBB6gAwIBAgIJAMPu2TnondkdMA0GCSqGSIb3DQEBCwUAMIHCMQswCQYD
@@ -38,17 +29,45 @@ w+8mUQFELlQeTnBgFmC6EqbzoYHIpIHFMIHCMQswCQYDVQQGEwJTRzELMAkGA1UE
 CBMCU0cxEjAQBgNVBAcTCVNpbmdhcG9yZTEeMBwGA1UEChMVSW5ub3ZhdGl2ZSBD
 b25uZWN0aW5nMR4wHAYDVQQLExVJbm5vdmF0aXZlIENvbm5lY3RpbmcxGTAXBgNV
 BAMTEGluY29ubmVjdGluZy5jb20xEDAOBgNVBCkTB0Vhc3lSU0ExJTAjBgkqhkiG
-9w0BCQEWFmFkbWluQGluY29ubm5lY3RpbmcuY29tggkAw+7ZOeid2R0wEwYDVR0l
-BAwwCgYIKwYBBQUHAwIwCwYDVR0PBAQDAgXgMA0GCSqGSIb3DQEBCwUAA4IBAQCi
-Z9zbJBkjVyGbRtTPt5YDa1ds7AwFfeus6VOlrEYAiaa+/1o2MU+wCPsohx88EbNO
-TzpMp/3E7SKUop/YSwA1nByyxd4TAb38vmtGJs9RozfUAZZH2N4lTxAYDT4pFnFs
-BAdBaCgfkpV6nW1TZTVpSr9/3EjGIu4RK9C5r0pQATQTGp7aIBr7cHbEMA+nAdc+
-0vUAx0LgGevoycjz7R/9NU/Mn0kw/p+FT62ez3IpNShsy+tWS7jHonWoO6SVIcYX
-3qYPYySU34XHDzYOw9ozFg2mZlE83IEciBUmFsRpkYgzzEmUv1l1mkhPxhjht2Yn
-TglZiZ1fplfd27RCKcku
+9w0BCQEWFmFkbWluQGluY29ubmVjdGluZy5jb22CCQDD7tk56J3ZHTAMBgNVHRME
+BTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQCiZ9zbJBkjVyGbRtTPt5YDa1ds7AwF
+feus6VOlrEYAiaa+/1o2MU+wCPsohx88EbNOTzpMp/3E7SKUop/YSwA1nByyxd4T
+Ab38vmtGJs9RozfUAZZH2N4lTxAYDT4pFnFsBAdBaCgfkpV6nW1TZTVpSr9/3EjG
+Iu4RK9C5r0pQATQTGp7aIBr7cHbEMA+nAdc+0vUAx0LgGevoycjz7R/9NU/Mn0kw
+/p+FT62ez3IpNShsy+tWS7jHonWoO6SVIcYX3qYPYySU34XHDzYOw9ozFg2mZlE8
+3IEciBUmFsRpkYgzzEmUv1l1mkhPxhjht2YnTglZiZ1fplfd27RCKcku
 -----END CERTIFICATE-----
 </ca>
-
+<key>
+-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDIbq47pDCl/PCl
+jfyY7/sm/u88qljMczTNVEvPmBhDLaonqQPTmPS31VP5RVgEckZUKKkHxzZeg+hE
+YcIWapx3xVtt6upH1Pc462gLz1/nb9/QxGf9ugnB7eS9SWeQN2PcA71A8ssWKgHb
+1FvGTD63OpmBPh4XwIUsGAQ2uTfuRmlOQ+QPEv8megsbTA062MSX7SoFlQYrPOTi
+nejEajfK/WdTvox5wKNKZIfcfu+1cDZYGUictUtM0OuPoHJ+AIB6QeRo6P/fJW1M
+wGQRMFGt2np4S6uEic6xgL2EHiZ6uF5EFIyHnVBxCZPdI5pik31E7e5ENSsSiv+F
+V8X/Ebd9AgMBAAECggEAYVSmFV5RJXnkHnEJ1fbLno8z++C5CGd1n7QssF2qgozd
+US8ZJZrkU5UrlyPebyJTFrE8DAPoWhNyKirSxnH1E5BqKsFmDYXUm/Zs6zdD2i6Q
+oF+QJD1AWcU9S9ImkXjkbEYAlFaS2muBxY+lFXGXDwFM498XW+9ofBYZjb159KGt
+wIbj/0I7JeC1ae7Vz/OIezxEYtMKik4Z2ZYraNFdHuGSdqKIUnuA1VOiMfm6ohGM
+P/5c5VX8Q9BEy/5VDQV0aVC1zEQYRKj0K/nugZTYEUZE7J/7hxrrMPzukHXtFxq9
+LNO1LeNgtxKGUt8LvhsUg0x3py5lhZps6hHA3tDL4QKBgQD3/OaSZNoVzw6JSjSl
+pJ0BnmiDkDHXsa3wWYQCFtKJRX+ku4L2Xjbl+HlArcYFwH/dBX78squlSRx0ItDz
+EE6SRS7AcoXv8AS3st6u71n5gSb4+BChkojVeDHPoiDkIuF1P7ZSH7UAJGUaZBZ9
++jKI3XhMKgJC5PPQ5O7OD2teOQKBgQDO6HMbIB8J6zSOZoO8L+1chS4RWKq86j/j
+u/J0EUJmW1nr3+/aP4Md5cOLai8hq80rhA1f8Cj9uD9+cgGD02ITBsnmJxHvLlHP
+ribVbsZ12yHmZcRCkwZaQl92llTk3Rj9RnuKV584mzCrhwVJipVMzfbYHt0tLe/W
+vfVSDnHjZQKBgQDwJM+DZHZsOB5zhJCG92mzb5r2DGS34y/1WDola8Rleg+pjou7
+2HCBMqT4pU7lswwfFHtsafkeDjanoC+HsXrk2mnzovNg7qUi3uwVq2MN4qvC3TX9
+wNERJ1vVHcOMKNr7l78Ot/WnNZdSfynoxKi7MPyVhPi7nssctxUqJnRqwQKBgQDB
+lPG8uzzPBuRRJtCxzRWCrof/armzrmbAJyQcO9mn8mgbK5U42JtP6ZweX+Zg1mBL
+Cm2JCSUQ3MVrBDcuoyLrMjrLvlolMW0RpZpnrhC4S6FX8nbA4tXatKakSNp8le+/
+Z6ZGNNyfFXNfyB/GQoaVKU59vcKpdoUioO9ZKnKbkQKBgFnydv3qOSKt2bv5GoY+
+osUUqFdxMGvPxL5SkksInw2G9DZzoC41ZvaqoRKDePe3n8Dw3BLyBMa4H7VuDXfL
+YOKmnHJXbbaj6rB2fBMyOLx0nRNTkLoFNwiufiGWaWzWmbTDKLbJvEMC8n3MRB1w
+Ppp0BDXVmF5qL3pQ/9RwDg16
+-----END PRIVATE KEY-----
+</key>
 <cert>
 -----BEGIN CERTIFICATE-----
 MIIFcjCCBFqgAwIBAgIBAjANBgkqhkiG9w0BAQUFADCBwjELMAkGA1UEBhMCU0cx
@@ -83,50 +102,16 @@ y08wrjV0mZ7sXY3CVwszozKLuB2ZwBUrnHFfaThxFRiV5KJhNXOZVPiI7s4ikqzU
 mWZiNsjY
 -----END CERTIFICATE-----
 </cert>
-
-<key>
------BEGIN PRIVATE KEY-----
-MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDIbq47pDCl/PCl
-jfyY7/sm/u88qljMczTNVEvPmBhDLaonqQPTmPS31VP5RVgEckZUKKkHxzZeg+hE
-YcIWapx3xVtt6upH1Pc462gLz1/nb9/QxGf9ugnB7eS9SWeQN2PcA71A8ssWKgHb
-1FvGTD63OpmBPh4XwIUsGAQ2uTfuRmlOQ+QPEv8megsbTA062MSX7SoFlQYrPOTi
-nejEajfK/WdTvox5wKNKZIfcfu+1cDZYGUictUtM0OuPoHJ+AIB6QeRo6P/fJW1M
-wGQRMFGt2np4S6uEic6xgL2EHiZ6uF5EFIyHnVBxCZPdI5pik31E7e5ENSsSiv+F
-V8X/Ebd9AgMBAAECggEAYVSmFV5RJXnkHnEJ1fbLno8z++C5CGd1n7QssF2qgozd
-US8ZJZrkU5UrlyPebyJTFrE8DAPoWhNyKirSxnH1E5BqKsFmDYXUm/Zs6zdD2i6Q
-oF+QJD1AWcU9S9ImkXjkbEYAlFaS2muBxY+lFXGXDwFM498XW+9ofBYZjb159KGt
-wIbj/0I7JeC1ae7Vz/OIezxEYtMKik4Z2ZYraNFdHuGSdqKIUnuA1VOiMfm6ohGM
-P/5c5VX8Q9BEy/5VDQV0aVC1zEQYRKj0K/nugZTYEUZE7J/7hxrrMPzukHXtFxq9
-LNO1LeNgtxKGUt8LvhsUg0x3py5lhZps6hHA3tDL4QKBgQD3/OaSZNoVzw6JSjSl
-pJ0BnmiDkDHXsa3wWYQCFtKJRX+ku4L2Xjbl+HlArcYFwH/dBX78squlSRx0ItDz
-EE6SRS7AcoXv8AS3st6u71n5gSb4+BChkojVeDHPoiDkIuF1P7ZSH7UAJGUaZBZ9
-+jKI3XhMKgJC5PPQ5O7OD2teOQKBgQDO6HMbIB8J6zSOZoO8L+1chS4RWKq86j/j
-u/J0EUJmW1nr3+/aP4Md5cOLai8hq80rhA1f8Cj9uD9+cgGD02ITBsnmJxHvLlHP
-ribVbsZ12yHmZcRCkwZaQl92llTk3Rj9RnuKV584mzCrhwVJipVMzfbYHt0tLe/W
-vfVSDnHjZQKBgQDwJM+DZHZsOB5zhJCG92mzb5r2DGS34y/1WDola8Rleg+pjou7
-2HCBMqT4pU7lswwfFHtsafkeDjanoC+HsXrk2mnzovNg7qUi3uwVq2MN4qvC3TX9
-wNERJ1vVHcOMKNr7l78Ot/WnNZdSfynoxKi7MPyVhPi7nssctxUqJnRqwQKBgQDB
-lPG8uzzPBuRRJtCxzRWCrof/armzrmbAJyQcO9mn8mgbK5U42JtP6ZweX+Zg1mBL
-Cm2JCSUQ3MVrBDcuoyLrMjrLvlolMW0RpZpnrhC4S6FX8nbA4tXatKakSNp8le+/
-Z6ZGNNyfFXNfyB/GQoaVKU59vcKpdoUioO9ZKnKbkQKBgFnydv3qOSKt2bv5GoY+
-osUUqFdxMGvPxL5SkksInw2G9DZzoC41ZvaqoRKDePe3n8Dw3BLyBMa4H7VuDXfL
-YOKmnHJXbbaj6rB2fBMyOLx0nRNTkLoFNwiufiGWaWzWmbTDKLbJvEMC8n3MRB1w
-Ppp0BDXVmF5qL3pQ/9RwDg16
------END PRIVATE KEY-----
-</key>
-
 comp-lzo
 nobind
 persist-tun
-
 # persist-tun also enables pre resolving to avoid DNS resolve problem
 preresolve
-
 # Use system proxy setting
 management-query-proxy
-
 # Custom configuration options
-# You are on your own here :)
+# You are on your on own here :)
+# These Options were found in the config file do not map to config settings:
 reneg-sec 0
 ns-cert-type server
 resolv-retry infinite
