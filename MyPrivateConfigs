@@ -1,23 +1,22 @@
 # Interface name (from URI fragment): ExclaveVirtual
 [Interface]
 # Private key (URL-decoded)
-PrivateKey = a5tjfem+fn7qKKAgugVM7N+dmMoJRAO7SmqkqWf76jw=
+PrivateKey = IAhIp/GqYh5sXJYqCFSG13fQLrjQNsfyWL+D74pr/Gw=
 # Addresses (both IPv4 and IPv6 from the URI)
-Address = 172.16.0.2/32, 2606:4700:110:80f0:1ca5:9da6:2fba:d615/128
+Address = 172.16.0.2/32, 2606:4700:110:8edd:a67c:35d7:e654:aba1/128
 # MTU from URI
-MTU = 1420
-# Note: "reserved" parameter in the URI was: 193,135,85
-# (kept here as a comment because its intended meaning isn't standard)
-# Reserved = 193,135,85
+MTU = 1280
+# Note: "reserved" parameter in the URI was: 37,153,23
+# (kept here as a comment since it's non-standard)
+# Reserved = 37,153,23
 
 [Peer]
 # Peer public key (URL-decoded)
 PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-# Endpoint from URI (host:port)
-Endpoint = 162.159.192.1:4500
-# AllowedIPs — **assumption**: routing all traffic through this peer.
-# Change if you only want specific routes.
+# Endpoint (IPv6 address and port)
+Endpoint = [2606:4700:d0::a29f:c001]:1701
+# AllowedIPs — assuming full tunnel (all traffic)
 AllowedIPs = 0.0.0.0/0, ::/0
 
-# (Optional) if you want a keepalive to keep NAT mappings:
+# (Optional)
 # PersistentKeepalive = 25
