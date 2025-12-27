@@ -1,3 +1,4 @@
 vless://3dab3c75-77ff-468d-8898-5b09b602924a@imalrzaivless.imalrzai.workers.dev:443?path=ws&security=tls&encryption=none&host=imalrzaivless.imalrzai.workers.dev&fp=chrome&type=ws&sni=imalrzaivless.imalrzai.workers.dev#ExclaveVirtual
 vless://9e25693f-a2a4-4c54-a6d0-3eb9ed4fbf99@exclavevirtualvless.alirexaxulst.workers.dev:443?path=ws&security=tls&encryption=none&host=exclavevirtualvless.alirexaxulst.workers.dev&fp=chrome&type=ws&sni=exclavevirtualvless.alirexaxulst.workers.dev#ExclaveVirtual
 vless://c2d061e7-31c6-4a3c-ba7a-f3252d323461@xbatteamvless.xbatteamdns.workers.dev:443?path=ws&security=tls&encryption=none&host=xbatteamvless.xbatteamdns.workers.dev&fp=chrome&type=ws&sni=xbatteamvless.xbatteamdns.workers.dev#ExclaveVirtual
+vless://b09cd2c8-ccb1-461d-894a-171523b6629e@elmira.elmira.workers.dev:443?path=ws&security=tls&encryption=none&insecure=0&host=elmira.elmira.workers.dev&fp=chrome&type=ws&allowInsecure=0&sni=elmira.elmira.workers.dev#ExclaveVirtual
