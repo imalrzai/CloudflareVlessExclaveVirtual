@@ -1,3 +1,4 @@
+vless://3dab3c75-77ff-468d-8898-5b09b602924a@alirezavless.alirezahost.workers.dev:443?encryption=none&security=tls&sni=alirezavless.alirezahost.workers.dev&fp=chrome&type=ws&host=alirezavless.alirezahost.workers.dev&path=ws&ed=4096#ExclaveVirtual
 vless://fb498423-1178-4234-9657-f829a179ebce@voxiteam.voxiteam.workers.dev:443?encryption=none&security=tls&sni=voxiteam.voxiteam.workers.dev&fp=chrome&type=ws&host=voxiteam.voxiteam.workers.dev&path=ws&ed=4096#ExclaveVirtual
 vless://1e8c9a43-2648-4df3-a101-8a0037c296ce@mahdis.classgap.workers.dev:443?encryption=none&security=tls&sni=mahdis.classgap.workers.dev&fp=chrome&type=ws&host=mahdis.classgap.workers.dev&path=ws&ed=4096#ExclaveVirtual
 vless://8a628272-6d51-4460-befc-a0544d55935f@zahra.classgap.workers.dev:443?encryption=none&security=tls&sni=zahra.classgap.workers.dev&fp=chrome&type=ws&host=zahra.classgap.workers.dev&path=ws&ed=4096#ExclaveVirtual
